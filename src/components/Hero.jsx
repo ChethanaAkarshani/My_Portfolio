@@ -1,12 +1,6 @@
 import profileImage from "../assets/images/Profile.png";
 import { motion } from "framer-motion";
-
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaDownload
-} from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
 
 function Hero() {
   return (
@@ -40,18 +34,15 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-
-          <a
-            href="/CV/Chethana.pdf"
-            download="Chethana_CV.pdf"
-            className="btn"
-          >
-            <FaDownload />
-            Download CV
-          </a>
-
+         <a
+  href={`${import.meta.env.BASE_URL}CV/Chethana_CV.pdf`}
+  download="Chethana_CV.pdf"
+  className="btn"
+>
+  <FaDownload />
+  Download CV
+</a>
         </div>
-
 
       </div>
 
@@ -61,7 +52,6 @@ function Hero() {
           alt="Chethana Akarshani"
         />
       </div>
-
     </motion.section>
   );
 }
